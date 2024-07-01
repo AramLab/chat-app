@@ -18,7 +18,7 @@
 1. Склонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/yourusername/chat-app.git
+   git clone https://github.com/AramLab/chat-app.git
    cd chat-app
 2. Установите зависимости:
 
@@ -32,38 +32,21 @@
 
 ## Использование API
 
-### Создание пользователя
-  ```bash
-  curl -X POST http://localhost:8080/users -d '{"username": "username", "password": "password"}' -H "Content-Type: application/json"
-
-### Авторизация пользователя
-  ```bash
-  curl -X POST http://localhost:8080/login -d '{"username": "username", "password": "password"}' -H "Content-Type: application/json"
-
-### Создание канала
-  ```bash
-  curl -X POST http://localhost:8080/channels -d '{"name": "general"}' -H "Content-Type: application/json"
-
-### Отправка сообщения
-
-  ```bash
-  curl -X POST http://localhost:8080/messages -d '{"channel_id": 1, "user_id": 1, "text": "Hello, world!"}' -H "Content-Type: application/json"
-
-### Получение списка каналов
-  ```bash
-  curl http://localhost:8080/channels
-
-### Получение сообщений из канала
-  ```bash
-  curl http://localhost:8080/messages?channelID=1
-
-
-
-
-
-
-
-
-
-
-
+1. Создание пользователя:
+   ```bash
+   curl -X POST http://localhost:8080/users -d '{"username": "username", "password": "password"}' -H "Content-Type: application/json"
+2. Авторизация пользователя:
+   ```bash
+   curl -X POST http://localhost:8080/login -d '{"username": "username", "password": "password"}' -H "Content-Type: application/json"
+3. Создание канала:
+   ```bash
+   curl -X POST http://localhost:8080/channels -d '{"name": "general"}' -H "Content-Type: application/json"
+4. Отправка сообщения:
+   ```bash
+   curl -X POST http://localhost:8080/messages -d '{"channel_id": 1, "user_id": 1, "text": "Hello, world!"}' -H "Content-Type: application/json"
+5. Получение списка каналов:
+   ```bash
+   curl http://localhost:8080/channels
+6. Получение сообщений из канала:
+   ```bash
+   curl http://localhost:8080/messages?channelID=1
